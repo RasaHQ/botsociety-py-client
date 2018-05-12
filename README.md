@@ -63,7 +63,7 @@ Out[5]:
   'updatedAt': '2018-05-09T12:05:31.593Z'}]
 ```
 
-### conversation('CONVERSATION_ID')
+### conversation('conversation_id')
 Retrieve all the information about a single conversation (e.g. includes all messages).
 
 ```python
@@ -124,7 +124,7 @@ Out[6]:
  'ws_text': 'Hi, click the button below to start!'}
 ```
 
-### message('MESSAGE_ID', 'CONVERSATION_ID')
+### message('message_id', 'conversation_id')
 Retrieve all the information about a single message of a conversation.
 
 ```python
@@ -162,7 +162,7 @@ Out[7]:
  'updatedAt': '2018-05-09T09:49:34.469Z'}
 ```
 
-### variables('CONVERSATION_ID')
+### variables('conversation_id')
 Retrieve all variables of a conversation.
 
 ```python
