@@ -176,3 +176,5 @@ Out[8]: {'cuisine': {'values': ['chinese']}}
 ```
 
 ## License
+
+Licensed under the MIT License, Copyright 2018 Rasa Technologies GmbH. [Copy of the license](LICENSE).
