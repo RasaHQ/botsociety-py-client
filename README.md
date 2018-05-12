@@ -7,7 +7,7 @@ This implementation is inspired by the official
 
 ## Installation
 ```
-pip install -e .
+pip install botsociety-client
 ```
 
 ## Usage example

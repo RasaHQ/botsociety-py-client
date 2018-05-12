@@ -1,0 +1,26 @@
+language: python
+cache:
+  directories:
+  - "$HOME/.cache/pip"
+python:
+- '2.7'
+- '3.5'
+- '3.6'
+install:
+- pip install -e .
+- pip list
+script: skip
+jobs:
+  include:
+  - stage: deploy
+    install: skip
+    script: skip
+    deploy:
+      provider: pypi
+      user: amn41
+      distributions: "sdist bdist_wheel"
+      on:
+        branch: master
+        tags: true
+      password:
+        secure: "c2nNz8K2vL5354sZSRf6daPRHKj7hFLHmv5zDhI2a2hP0MnYG9twKEoyC+Uo6VG0E4gVlxvl73WLztA23oEwn7WiMgiSkAwNWL+zEhG99kL19HIPNAdsF09JCWLHPLKxXNwc1ty+q2k2xP4HWQpgVwiCEMWD2iQ39ERev56IpysWosyZYa+XGwCFuewAOdYIY2eMwvTvq0xr2v2apwRrI4RzSAFSFl8EjXXfw1oCFktSkamTme/kkz6wCXo9fk3ehvDOr2jzh+qRQytMfUC30CT/BhNaiyJ6SUN48hKbStOfnHNxMcGzT8lSgRtUBitq0bZRlRZk7Qyq8EQYRGReO7EzVKqfPGY5KfLsQJ5cpQs9lpiZe8a5xp/MHIjoVl+9qmhz5lVCW3lJJgl6sTgy/lgt5hvDqfp+vTogSKeSifbozr0lqXS9tGmiO/QBcef3sRX46/QC37oxrZPdqUhJ04OaJgRVsijLh1eILjRToklQwWATpX3E/8YBYCxvd72G26bKBP8+m6LctuVhP07rxbtqHSk57aZ2qNW+1vlSlLNf7sxQQDFsOmhcy1OESJuq6waZWm/JXFIvb22CahMfr3goN0hzJA7m3FW03l8OQlcf4LnT7uisVYFD0nQkjndwRo9mSg/LmJj9zYlGQ+DVYmP6TW+MgyJb0SU3nZ5wIY0="

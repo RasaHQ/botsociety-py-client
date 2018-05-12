@@ -57,7 +57,7 @@ class BotSocietyClient(object):
 
     def message(self, message_id, conversation_id):
         sub_url = "conversations/{}/messages/{}".format(
-                message_id, conversation_id)
+                conversation_id, message_id)
         return self._call_api(sub_url)
 
     def variables(self, conversation_id):
