@@ -175,6 +175,14 @@ In [8]: client.variables("5af2c33e64aefa000b21b096")
 Out[8]: {'cuisine': {'values': ['chinese']}}
 ```
 
+## Changelog
+
+### 1.0.0 - 14.05.18
+
+*added*:
+- initial version released
+- feature complete with respect to node js client library
+
 ## License
 
 Licensed under the Apache License, Version 2.0. Copyright 2018 Rasa Technologies GmbH. [Copy of the license](LICENSE).
