@@ -1,6 +1,6 @@
 # Botsociety Python Client
 [![Build Status](https://travis-ci.com/RasaHQ/botsociety-py-client.svg?token=dD3o9yxyCw5PCTNpznf4&branch=master)](https://travis-ci.com/RasaHQ/botsociety-py-client)
-[![PyPI version](https://badge.fury.io/py/botsociety-py-client.svg)](https://badge.fury.io/py/botsociety-py-client)
+[![PyPI version](https://badge.fury.io/py/botsociety-client.svg)](https://badge.fury.io/py/botsociety-client)
 
 Connects to the botsociety API and provides an easy to use python API
 
