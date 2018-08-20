@@ -177,7 +177,25 @@ In [8]: client.variables("5af2c33e64aefa000b21b096")
 Out[8]: {'cuisine': {'values': ['chinese']}}
 ```
 
+## Advanced Usage
+
+### Specifying your own botsociety API server
+If you happen to run your own botsociety API server, there
+is a way to specify its url:
+
+```python
+from botsociety import BotSocietyClient
+
+client = BotSocietyClient(user_id="USER_ID",
+                          api_key="API_KEY",
+                          api_url="http://yourapi.com")
+```
+
 ## Changelog
+
+### 1.1.0 - 20.08.18
+*added*:
+- allow user to specify version / url of botsociety API 
 
 ### 1.0.0 - 14.05.18
 

@@ -15,13 +15,13 @@ API_VERSION = "1.1"
 
 
 class BotSocietyClient(object):
-    
+
     def __init__(self,
                  user_id,
                  api_key,
                  api_url=API_URL,
                  api_version=API_VERSION
-                ):
+                 ):
         self.user_id = user_id
         self.api_key = api_key
         self.api_url = api_url
@@ -65,6 +65,17 @@ class BotSocietyClient(object):
         sub_url = "conversations/{}/messages/{}".format(
                 conversation_id, message_id)
         return self._call_api(sub_url)
+
+    def messages(self, conversation_id, **filters):
+        sub_url = "conversations/{}".format(conversation_id)
+        results = self._call_api(sub_url).get("messages", [])
+
+        if not filters:
+            return results
+        else:
+            return [r
+                    for r in results
+                    if all([r.get(k) == v for k, v in filters.items()])]
 
     def variables(self, conversation_id):
         sub_url = "conversations/{}/variables".format(conversation_id)
