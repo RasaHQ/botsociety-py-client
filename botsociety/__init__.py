@@ -9,22 +9,28 @@ import requests
 
 logger = logging.getLogger(__name__)
 
+API_URL = "https://app.botsociety.io/apisociety"
+
+API_VERSION = "1.1"
+
 
 class BotSocietyClient(object):
-    API_URL = "https://app.botsociety.io/apisociety"
-
-    API_VERSION = "1.1"
-
+    
     def __init__(self,
                  user_id,
-                 api_key):
+                 api_key,
+                 api_url=API_URL,
+                 api_version=API_VERSION
+                ):
         self.user_id = user_id
         self.api_key = api_key
+        self.api_url = api_url
+        self.api_version = api_version
 
     def _call_api(self, sub_url, api_version=None):
-        local_api = api_version or self.API_VERSION
+        local_api = api_version or self.api_version
 
-        url = "{}/{}/{}".format(self.API_URL,
+        url = "{}/{}/{}".format(self.api_url,
                                 local_api,
                                 sub_url)
 
